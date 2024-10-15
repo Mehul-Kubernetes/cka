@@ -10,9 +10,5 @@ metadata:
    - name: c001
      image: nginx
      ports:
-     -  containerPort: 80  
-   - name: c002
-     image: redis
-     ports:
-     -  containerPort: 6379    
+     -  containerPort: 80      
 	   
