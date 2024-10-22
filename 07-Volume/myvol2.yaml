@@ -13,4 +13,4 @@ spec:
   - name: nginx-storage
     hostPath:
       # directory location on host
-      path: /var/log/nginx
+      path: /var/www/html
