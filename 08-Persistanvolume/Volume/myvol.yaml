@@ -11,4 +11,7 @@ spec:
       mountPath: /data/redis
   volumes:
   - name: redis-storage
-    emptyDir: {}
+    hostPath:
+      # directory location on host
+      path: /var/log/nginx
+
