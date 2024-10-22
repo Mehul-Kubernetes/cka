@@ -1,18 +1,12 @@
 ---
 apiVersion: v1
-kind: Pod
+kind: PersistentVolume
 metadata:
-  name: nginx
-  labels:
-    name: nginx
+  name: mypv
 spec:
-  containers:
-  - name: nginx
-    image: nginx:alpine
-    volumeMounts:
-      - name: local-persistent-storage
-        mountPath: /var/www/html
-  volumes:
-    - name: local-persistent-storage
-      persistentVolumeClaim:
-        claimName: local-pvc
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /data
