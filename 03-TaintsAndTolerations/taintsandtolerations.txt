@@ -1,0 +1,13 @@
+kubectl taint node workernode01 app=dev:NoSchedule
+kubectl taint node workernode02 app=prod:NoSchedule
+
+
+kubectl taint node workernode01 app=dev:NoSchedule-
+kubectl taint node workernode02 app=prod:NoSchedule-
+
+
+kubectl taint node workernode01 app=dev:NoSchedule
+kubectl taint node workernode02 app=dev:NoSchedule
+kubectl taint node workernode02 app=prod:NoSchedule
+kubectl taint node workernode01 app=prod:NoSchedule
+

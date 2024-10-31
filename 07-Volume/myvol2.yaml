@@ -12,5 +12,4 @@ spec:
   volumes:
   - name: nginx-storage
     hostPath:
-      # directory location on host
       path: /var/www/nginx/html

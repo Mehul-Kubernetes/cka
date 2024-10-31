@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-dev
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+tolerations:
+- key: "app"
+  operator: "Equal"
+  value: dev
+  effect: NoSchedule

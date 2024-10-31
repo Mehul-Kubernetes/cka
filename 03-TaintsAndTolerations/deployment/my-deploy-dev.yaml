@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-deploy-dev
+  name: my-deploy-dev
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: my-deploy-dev
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: my-deploy-dev
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
+      tolerations:
+      - key: "app"
+        operator: "Equal"
+        value: dev
+        effect: NoSchedule
