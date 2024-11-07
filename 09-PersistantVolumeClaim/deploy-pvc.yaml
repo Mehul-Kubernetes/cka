@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: alpha-mysql
+  name: alpha-mysql
+  namespace: alpha
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: alpha-mysql
+  template:
+    metadata:
+      labels:
+        app: alpha-mysql
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: alpha-pv
+          mountPath: /var/www/html
+      volumes:
+      - name: alpha-pv
+        persistentVolumeClaim:
+          claimName: mysql-alpha-pvc
