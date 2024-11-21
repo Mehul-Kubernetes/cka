@@ -7,9 +7,9 @@ spec:
   - name: c001
     image: nginx
     volumeMounts:
-    - name: nginx-vol
+    - name: nginx-storage-local
       mountPath: /usr/share/nginx/html
   volumes:
-  - name: nginx-storage
+  - name: nginx-storage-local
     hostPath:
       path: /var/www/nginx/html
