@@ -8,8 +8,8 @@ spec:
   containers:
   - name: nginx
     image: nginx
-tolerations:
-- key: "app"
-  operator: "Equal"
-  value: dev
-  effect: NoSchedule
+  tolerations:
+  - key: "app"
+    operator: "Equal"
+    value: dev
+    effect: NoSchedule
