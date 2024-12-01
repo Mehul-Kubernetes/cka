@@ -16,5 +16,5 @@ spec:
     volumeMounts:
     - name: logs
       mountPath: /var/log
-  - image: ngix
-    name: ngix
+  - image: nginx
+    name: nginx
