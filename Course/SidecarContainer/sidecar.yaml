@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -20,4 +21,6 @@ spec:
   volumes:
   - name: logs
     emptyDir: {}
-
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
