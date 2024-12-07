@@ -20,5 +20,5 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # NodePort
 
-https://raw.githubusercontent.com/mehul-kubernetes/cka-exam-preparation/refs/heads/main/Scenarios/Ingress/nginx/controller/ingress-controller-nodeport-azure-deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/mehul-kubernetes/cka-exam-preparation/refs/heads/main/Scenarios/Ingress/nginx/controller/ingress-controller-nodeport-azure-deploy.yaml
 
