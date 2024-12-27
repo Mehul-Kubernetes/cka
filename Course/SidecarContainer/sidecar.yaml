@@ -15,9 +15,9 @@ spec:
     name: sidecar
     volumeMounts:
     - mountPath: "/var/log"
-      name: pv-storage
+      name: logs
   volumes:
-  - name: pv-storage
+  - name: logs
     emptyDir: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
